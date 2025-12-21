@@ -6,7 +6,7 @@ Celem projektu jest zbudowanie bota śledzącego akcje na giełdzie i odpowiedni
 
 ### Wymagania niefunkcjonalne
 Bot wykorzystuje w pełni zasoby dostępne na maszynie, aby zminimalizować opóźnienia w przetwarzaniu danych giełdowych i odpowiednio na nie reagować.
-Zastosowany język programowania Golang pozwala na łatwe wykorzystanie równoległości dzięki goroutines, które są lekkimi wątkami zarządzanymi przez runtime Go, co minimalizuje koszty przełączania kontekstu i umożliwia efektywne wykorzystanie wszystkich dostępnych rdzeni procesora - co jest wymagane w projekcie z wysoką stosunkowo liczbą operacji I/O.
+Zastosowany język programowania Golang pozwala na łatwe wykorzystanie równoległości dzięki goroutines, które są lekkimi wątkami zarządzanymi przez runtime Go, co minimalizuje koszty przełączania kontekstu i umożliwia efektywne wykorzystanie wszystkich dostępnych rdzeni procesora - co jest wymagane w projekcie ze stosunkowo wysoką liczbą operacji I/O.
 
 ### Architektura
 ![Architecture](https://www.plantuml.com/plantuml/png/dPJFRjD048VlynIZN813LCM-SK1jKk1G8VxaW0JYC5qFhcjxnzgCLMp4fS_5DU-5Txkrd50BXLjclczdej-kVBvJSjhM5QWqg8BNeYerPeLZeuLO038g3XTl2zxVPuGN2wGTrkHArjKnN4zWSWmt4vW2FCFbSebNKZTYsMhdIsZ8b9GpBhOgfiHtGSQrw09_0kBNsBWa9Np3QcxOuSKtF_VxGxMQizPJAvcpDbChzTPhcnUMyGmtuZZGXuvdMtMad7VnBpoMgmEsFc1XytkNiSEFBRSSOAX36JR-ODFwxF6pk99TK7mJuDTZR9-u8dFB8RDu5yFlLsCA-18_o7N1haV3jejECdMIfvrqwgJ73aGGjiKa1kUIB6CUxbdk69_tLbnDLT7BtK1UmBZoVqwbfvs2Q0w7njH37gxdalQ_CHiq6CdXy6sNMzhVTtX3Dgk6-K-EIsR79QUC6wzzHXrvqCCJ6CGl5Hks1G7uHY3n1Gpmgctm37UDwpcZssCZ-QUH_ct0ETlCVo7-0000)
