@@ -1,2 +1,5 @@
 # Stock Market Bot
 Celem projektu jest zbudowanie bota śledzącego akcje na giełdzie i odpowiednie reagowanie na nie, wedle założonej strategii inwestycyjnej.
+
+### Diagram przypadków użycia
+![Use case diagram](https://www.plantuml.com/plantuml/png/VOy_JlD04CNxFSLyhZwAN045X8Je8eKq4St4EpXhUtUjyLYMZP1G94v0bNEaJHVx8fo4ZGb_eeYqx_VcpNlZKf2bihdw9qko14MEnYdn1OY7XHVn5hHXYiNue1l92MuC9emM2cwR0dMsszHGzTicDWZlBszmpwYDI-3QYr8OYsU8Pe5BvcjdiWYmX5b9_CNcLBjkBTmwWgl9tOExDTIljAzfi0P9gNq3T4du7asRKiZ-_XB1ar8mPC9eT0d_Prp5Is_t0_3YY4mpxnvDKd6LGYcCGedfriUUEKfOPZ4zt0TudFXfc_Y58GukZOw06nVcKKZwWmnNmvZpbi2u9QcHsmCEcQVYTmbDgJL1exXfqsuDItGwztNtEXG_QpZCxLUxJR-5DgUOd1dUdOW_xP_Lc9okRFu1)
