@@ -1,5 +1,6 @@
 # Stock Market Bot
-![logo](assets/logo.png)
+<img src="assets/logo.png" alt="Logo" width="250"/>
+
 Celem projektu jest zbudowanie bota śledzącego akcje na giełdzie i odpowiednie reagowanie na nie, wedle założonej strategii inwestycyjnej.
 
 ### Wymagania funkcjonalne
