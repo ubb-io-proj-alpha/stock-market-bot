@@ -1,6 +1,6 @@
-package types
+package main
 
-import time
+import "time"
 
 /*
 * 	Znormalizowane dane giełdowe
