@@ -1,0 +1,23 @@
+@startuml
+!theme plain
+top to bottom direction
+
+actor "Użytkownik" as User
+actor "Zewnętrzne API\nGiełdowe" as API
+
+rectangle "Stock Market Bot" {
+
+  User --> (Uruchom bota)
+  User --> (Skonfiguruj strategię)
+  User --> (Zatrzymaj bota)
+
+  (Uruchom bota) --> (Pobieraj dane rynkowe)
+  (Pobieraj dane rynkowe) --> API
+
+  (Pobieraj dane rynkowe) --> (Przetwarzaj dane)
+  (Przetwarzaj dane) --> (Podejmij decyzję handlową)
+
+  (Podejmij decyzję handlową) --> (Złóż zlecenie)
+  (Złóż zlecenie) --> API
+}
+@enduml

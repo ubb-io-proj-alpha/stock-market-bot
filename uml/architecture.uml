@@ -1,0 +1,42 @@
+@startuml
+top to bottom direction
+
+actor "Giełda A" as market1
+actor "Giełda B" as market2
+actor "Giełda C" as market3
+
+package "Stock Market Bot" {
+  [Market Data Fetcher A] as fetcher1
+  [Market Data Fetcher B] as fetcher2
+  [Market Data Fetcher C] as fetcher3
+  [Engine / Core] as Engine
+  [Strategy A] as Strategy1
+  [Strategy B] as Strategy2
+  [Order Queue] as OrderQueue
+  [Execution Worker] as Exec
+
+}
+
+market1 --> fetcher1 : Pobierz ceny
+market2 --> fetcher2 : Pobierz ceny
+market3 --> fetcher3 : Pobierz ceny
+
+fetcher1 --> Engine : Dane giełdowe (znormalizowane)
+fetcher2 --> Engine : Dane giełdowe (znormalizowane)
+fetcher3 --> Engine : Dane giełdowe (znormalizowane)
+
+Engine --> Strategy1 : Przekaż dane
+Strategy1 --> Engine : Sygnały handlowe
+
+Engine --> Strategy2 : Przekaż dane
+Strategy2 --> Engine : Sygnały handlowe
+
+Engine --> OrderQueue : Sygnały handlowe
+
+OrderQueue --> Exec : Zlecenia
+
+Exec --> market1 : Kup / sprzedaj
+Exec --> market2 : Kup / sprzedaj
+Exec --> market3 : Kup / sprzedaj
+
+@enduml
