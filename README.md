@@ -1,6 +1,9 @@
 # Stock Market Bot
 Celem projektu jest zbudowanie bota śledzącego akcje na giełdzie i odpowiednie reagowanie na nie, wedle założonej strategii inwestycyjnej.
 
+### Stos technologiczny
+- [Golang](https://go.dev/)
+
 ### Wymagania niefunkcjonalne
 Bot wykorzystuje w pełni zasoby dostępne na maszynie, aby zminimalizować opóźnienia w przetwarzaniu danych giełdowych i odpowiednio na nie reagować.
 Zastosowany język programowania Golang pozwala na łatwe wykorzystanie równoległości dzięki goroutines, które są lekkimi wątkami zarządzanymi przez runtime Go. Goroutines korzystają domyślnie z asynchronicznego I/O i są planowane przez scheduler Go na wszystkie dostępne wątki systemowe, co minimalizuje koszty przełączania kontekstu i umożliwia efektywne wykorzystanie rdzeni procesora — istotne w projekcie ze stosunkowo wysoką liczbą operacji I/O.
