@@ -7,10 +7,10 @@ import "time"
 *	pochodzą z fetcherów
 */
 type MarketData struct {
-	source_market  string
-	symbol         string
-	price          float64
-	timestamp      time.Time
+	sourceMarket  string
+	symbol        string
+	price         float64
+	timestamp     time.Time
 }
 
 type ActionType int
@@ -23,11 +23,11 @@ const (
 * 	Decyzja podjęta przez strategię
 */
 type Signal struct {
-	strategy_name  string
-	symbol         string
-	action         ActionType
-	price  		   float64
-	timestamp      time.Time
+	strategyName  string
+	symbol        string
+	action        ActionType
+	price         float64
+	timestamp     time.Time
 }
 
 /*
@@ -36,9 +36,19 @@ type Signal struct {
 *	pochodzącego ze strategii.
 */
 type MarketOrder struct {
-	target_market  string
-	symbol         string
-	action         ActionType
-	amount         float64
-	timestamp      time.Time
+	targetMarket  string
+	symbol        string
+	action        ActionType
+	amount        float64
+	timestamp     time.Time
+}
+
+/*
+*	Kontekst aplikacji
+*/
+type Context struct {
+	marketDataChan  chan MarketData
+	signalChan      chan Signal
+	orderQueueChan  chan MarketOrder
+	strategies      []Strategy
 }
