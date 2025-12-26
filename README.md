@@ -23,5 +23,5 @@ Zastosowany język programowania Golang pozwala na łatwe wykorzystanie równole
 
 ### Uruchamianie
 ```sh
-# TODO
+# TODO...
 ```
