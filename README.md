@@ -21,7 +21,64 @@ Zastosowany język programowania Golang pozwala na łatwe wykorzystanie równole
 ### Diagram przypadków użycia
 ![Use case diagram](assets/use_case.png)
 
-### Uruchamianie
-```sh
-# TODO...
+
+### Uruchamianie i testowanie
+
+Projekt na tym etapie nie zawiera jeszcze kodu źródłowego, ale przygotowana została struktura oraz szablony plików do kompilacji, uruchamiania i testowania. Dzięki temu łatwo będzie rozpocząć implementację oraz zachować porządek w repozytorium.
+
+
+#### a) Uruchomienie głównego programu
+
+Do kompilacji i uruchamiania bota służą skrypty znajdujące się w katalogu `scripts/`:
+
+- **Windows**:
+	1. `scripts/compile.bat` – kompilacja projektu (np. z użyciem `go build`).
+	2. `scripts/run.bat` – uruchomienie bota (np. `go run ...` lub uruchomienie binarki).
+	Przykład użycia w PowerShell:
+	```powershell
+	.\scripts\compile.bat
+	.\scripts\run.bat
+	```
+
+- **Unix (Linux / macOS)**:
+	1. `scripts/compile.sh` – kompilacja projektu.
+	2. `scripts/run.sh` – uruchomienie bota.
+	Przykład użycia:
+	```bash
+	./scripts/compile.sh
+	./scripts/run.sh
+	```
+
+#### b) Uruchomienie testów
+
+Analogicznie, do uruchamiania testów służą skrypty w katalogu `scripts/`:
+
+- **Windows**:
+	- `scripts/test.bat` – uruchamia testy jednostkowe (np. `go test ./...`).
+
+- **Unix (Linux / macOS)**:
+	- `scripts/test.sh` – uruchamia testy jednostkowe.
+
+Przykład użycia:
+```powershell
+.\scripts\test.bat
 ```
+lub
+```bash
+./scripts/test.sh
+```
+
+
+
+#### c) Struktura folderów
+
+Repozytorium zostało podzielone na logiczne katalogi, co ułatwi dalszy rozwój projektu:
+
+- `src` – główny kod programu (logika bota, obsługa API giełd, strategie inwestycyjne itp.)
+- `tests` – testy jednostkowe i integracyjne, korzystające z mockowanych API
+- `mock` – implementacje mocków API giełdowych, wykorzystywane w testach
+- `uml` – źródła diagramów UML (architektura, przypadki użycia)
+- `assets` – obrazy i inne zasoby wykorzystywane w dokumentacji (np. logo, diagramy)
+
+Każdy katalog zawiera plik `README.md` lub odpowiednie pliki źródłowe po rozpoczęciu implementacji.
+
