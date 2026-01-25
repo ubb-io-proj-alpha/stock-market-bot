@@ -5,7 +5,7 @@ import "time"
 type Strategy interface {
 	broadcast(in *MarketData)
 	supports(symbol string) bool
-	process(out chan<- Signal)
+	run(out chan<- Signal)
 }
 
 /*
@@ -19,7 +19,7 @@ type ThresholdStrategy struct {
 	marketDataChan  chan MarketData
 }
 
-func (s *ThresholdStrategy) process(out chan<- Signal) {
+func (s *ThresholdStrategy) run(out chan<- Signal) {
 	for data := range s.marketDataChan {
 		signal := Signal {
 			strategyName: s.name,

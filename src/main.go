@@ -4,7 +4,6 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"time"
 	"fmt"
 )
 
@@ -44,10 +43,11 @@ func main() {
 
 	// spawn single goroutine for each defined strategy
 	for _, strategy := range context.strategies {
-		go strategy.process(context.signalChan)
+		go strategy.run(context.signalChan)
 	}
 
-	// broadcast market data to all supported strategies
+	/* broadcast market data to all supported strategies
+	*/ 
 	go func() {
 		for data := range context.marketDataChan {
 			for _, strategy := range context.strategies {
@@ -62,24 +62,6 @@ func main() {
 
 	fmt.Println("OK.")
 	fmt.Println("Running...")
-
-	context.marketDataChan <- MarketData {
-		"Alibaba.com",
-		"PLN",
-		900,
-		time.Now(),
-	}
-	context.marketDataChan <- MarketData {
-		"Alibaba.com",
-		"USD",
-		900,
-		time.Now(),
-	}
-	go func(){
-		for msg := range context.signalChan {
-			fmt.Printf("Signal recv: %s, %d\n", msg.strategyName, msg.action)
-		}
-	}()
 
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
