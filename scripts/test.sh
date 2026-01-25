@@ -1,5 +1,3 @@
-#!/bin/bash
-# Uruchomienie testów Go (przykład)
-# go test ../...
+#!/bin/sh
 
-echo "Tutaj dodaj polecenie uruchomienia testów po dodaniu kodu."
+go test tests/*.go

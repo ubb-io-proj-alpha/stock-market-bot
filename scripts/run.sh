@@ -1,5 +1,3 @@
-#!/bin/bash
-# Uruchomienie bota (przykład)
-# ../bin/stock-market-bot
+#!/bin/sh
 
-echo "Tutaj dodaj polecenie uruchomienia po dodaniu kodu."
+go run src/main.go
