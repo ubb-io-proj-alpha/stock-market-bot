@@ -1,3 +1,3 @@
 #!/bin/sh
 
-go run ./src/*.go
+go run src/main.go
